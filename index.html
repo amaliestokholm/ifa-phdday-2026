@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>reveal.js</title>
+
+<link rel="stylesheet" href="dist/reset.css">
+<link rel="stylesheet" href="dist/reveal.css">
+<link rel="stylesheet" href="dist/theme/dracula.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="plugin/highlight/monokai.css">
+<script src="//cdn.jsdelivr.net/npm/globe.gl"></script>
+<style>
+:root {
+	/* https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss */
+	--r-background-color: rebeccapurple;
+	--r-main-font: "Oswald", sans-serif;
+	--r-heading-font: "Oswald", sans-serif;
+	--r-main-font-weight: 300;
+	--r-heading-font-weight: 300;
+}
+
+.reveal {
+	/* Needed because reveal.js doesn't officially have --r-main-font-weight */
+	font-weight: var(--r-main-font-weight);
+}
+</style>
+
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
+		<section data-markdown="slides.md"
+			 data-separator="^^\r?\n---\r?\n$"
+			 data-separator-vertical="^\r?\n------\r?\n$"
+			 data-separator-notes="^Note:"
+			 data-charset="iso-8859-15"
+			 data-transition="slide">
+		</section>
+	</div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+	// More info about initialization & config:
+	// - https://revealjs.com/initialization/
+	// - https://revealjs.com/config/
+	Reveal.initialize({
+		hash: true,
+
+		// Learn about plugins: https://revealjs.com/plugins/
+		plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+	});
+</script>
+<script type="module">
+// https://globe.gl/example/moon-landing-sites/index.html
+import { scaleOrdinal } from 'https://esm.sh/d3-scale';
+
+const colorScale = scaleOrdinal(['orangered', 'mediumblue', 'darkgreen', 'yellow']);
+
+const labelsTopOrientation = new Set(['Apollo 12', 'Luna 2', 'Luna 20', 'Luna 21', 'Luna 24', 'LCROSS Probe']); // avoid label collisions
+
+const element = document.getElementById('globeViz');
+if (element != null) {
+	const moon = new Globe(element)
+		.globeImageUrl('./lunar_surface.jpg')
+		.bumpImageUrl('./lunar_bumpmap.jpg')
+		.backgroundImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/night-sky.png')
+		.showGraticules(true)
+		.showAtmosphere(false) // moon has no atmosphere
+		.labelText('label')
+		.labelSize(1.7)
+		.labelDotRadius(0.4)
+		.labelDotOrientation(d => labelsTopOrientation.has(d.label) ? 'top' : 'bottom')
+		.labelColor(d => colorScale(d.agency))
+		.labelLabel(d => `
+<div><b>${d.label}</b></div>
+<div>${d.agency} - ${d.program} Program</div>
+<div>Landing on <i>${new Date(d.date).toLocaleDateString()}</i></div>
+`)
+		.onLabelClick(d => window.open(d.url, '_blank'));
+
+	fetch('./moon_landings.json').then(r => r.json()).then(landingSites => {
+		moon.labelsData(landingSites);
+	});
+}
+	</script>
+</body>
+</html>
