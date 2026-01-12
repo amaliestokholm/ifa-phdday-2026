@@ -14,7 +14,7 @@ output$phonePlot <- renderPlot({
 
 ---
 
-<!-- .slide: data-auto-animate -->
+<!-- .slide: data-auto-animate data-auto-animate-duration="1.0"-->
 
 ```r [2,5-6]
 # Fill in the spot we created for a plot
@@ -26,3 +26,9 @@ output$phonePlot <- renderPlot({
 })
 ```
 <!-- .element: data-id="not-hello" -->
+
+---
+
+<!-- .slide: data-auto-animate-restart -->
+
+
