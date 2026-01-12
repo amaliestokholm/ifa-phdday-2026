@@ -14,9 +14,9 @@ a.l.stokholm@bham.ac.uk
 https://a.strova.dk/ifa-phdday-2026
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="../assets/uobcrest.png" style="width: 30%;">
-  <img src="../assets/cartography_whitebg.png" style="width: 30%;">
-  <img src="../assets/plato_logo.png" style="width: 30%;">
+  <img src="assets/uobcrest.png" style="width: 30%;">
+  <img src="assets/cartography_whitebg.png" style="width: 30%;">
+  <img src="assets/plato_logo.png" style="width: 30%;">
 </div>
 
 ---
