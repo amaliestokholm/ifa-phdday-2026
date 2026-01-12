@@ -1,21 +1,5 @@
-<section id="hub">
-### So what do you want to talk about?
-
-[Topic 1](#topic-1)  
-[Topic 2](#topic-2)  
-[Topic 3](#topic-3)  
-[Topic 4](#topic-4)  
-[Topic 5](#topic-5)  
-[Topic 6](#topic-6)  
-[Topic 7](#topic-7)
-
-</section>
-
----
-
 ### Topic 1
 This is some text to show if it works
-<!-- .element: id="topic-1" -->
 
 ------
 
@@ -43,7 +27,12 @@ This is some text to show if it works
 
 ------
 
+### Let us go back
+
+[Return to Hub](#hub)
+
 <!-- .element: id="topic-2-end" -->
+<div class="return-to-hub"></div>
 
 ---
 
@@ -52,8 +41,12 @@ This is some text to show if it works
 
 ------
 
-## Conclusion
+### Let us go back
+
+[Return to Hub](#hub)
+
 <!-- .element: id="topic-3-end" -->
+<div class="return-to-hub"></div>
 
 ---
 
@@ -62,8 +55,12 @@ This is some text to show if it works
 
 ------
 
-## Conclusion
+### Let us go back
+
+[Return to Hub](#hub)
+
 <!-- .element: id="topic-4-end" -->
+<div class="return-to-hub"></div>
 
 ---
 
@@ -72,8 +69,12 @@ This is some text to show if it works
 
 ------
 
-## Conclusion
+### Let us go back
+
+[Return to Hub](#hub)
+
 <!-- .element: id="topic-5-end" -->
+<div class="return-to-hub"></div>
 
 ---
 
@@ -82,8 +83,12 @@ This is some text to show if it works
 
 ------
 
-## Conclusion
+### Let us go back
+
+[Return to Hub](#hub)
+
 <!-- .element: id="topic-6-end" -->
+<div class="return-to-hub"></div>
 
 ---
 
@@ -92,5 +97,9 @@ This is some text to show if it works
 
 ------
 
-## Conclusion
+### Let us go back
+
+[Return to Hub](#hub)
+
 <!-- .element: id="topic-7-end" -->
+<div class="return-to-hub"></div>
