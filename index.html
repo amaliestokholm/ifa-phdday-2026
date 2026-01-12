@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <!-- This is the title shown in the tab-header in the browser -->
-<title>Amalie Stokholm | How did I get here? | IFA PhD Day 2026</title>
+<title>Amalie Stokholm | Academic route | IFA PhD Day 2026</title>
 
 <link rel="stylesheet" href="dist/reset.css">
 <link rel="stylesheet" href="dist/reveal.css">
@@ -103,6 +103,44 @@
   color: #6272a4;
   font-weight: 300;
 }
+/* Only style links inside the hub */
+#hub .hub-circle {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 50px auto 0;
+}
+#hub .hub-circle a {
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #333;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: transform 0.3s, background 0.3s;
+}
+/* Hover effect */
+#hub .hub-circle a:hover {
+  transform: scale(1.1);
+}
+/* Style for ending-link */
+#hub .hub-thank-you {
+  position: absolute;
+  bottom: 5;
+  right: 20px;
+  font-size: 14px;
+  color: #EFEFEF;
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+#hub .hub-thank-you:hover {
+  opacity: 1;
+  color: #333;
+}
 </style>
 
 </head>
@@ -118,6 +156,19 @@
 			 data-transition="slide"
 			 data-background-color="#EFEFEF">
 		</section>
+		<section id="hub" data-background-color="#EFEFEF">
+		      <h3>So what do you want to talk about?</h3>
+		      <div class="hub-circle">
+			<a href="#topic-1">Topic 1</a><br>
+			<a href="#topic-2">Topic 2</a><br>
+			<a href="#topic-3">Topic 3</a><br>
+			<a href="#topic-4">Topic 4</a><br>
+			<a href="#topic-5">Topic 5</a><br>
+			<a href="#topic-6">Topic 6</a><br>
+			<a href="#topic-7">Topic 7</a>
+		      </div>
+			<a href="#thank-you" class="hub-thank-you">Times up</a>
+		    </section>
 		<section data-markdown="./slides/choose-your-own.md"
 			 data-separator="^\n---\n$"
 			 data-separator-vertical="^\n------\n$"
@@ -125,6 +176,10 @@
 			 data-transition="slide"
 			 data-background-color="#EFEFEF">
 		</section>
+		<section id="thank-you" data-background-color="#EFEFEF">
+                      <h3>Thank you for your attention!</h3>
+                      <h3>Have a wonderful day!</h3>
+                    </section>
 	</div>
 </div>
 
@@ -154,19 +209,17 @@
 
 </script>
 
+<!-- Automatically go back to the hub when done with a topic-->
 <script>
 document.addEventListener('slidechanged', function(event) {
-  const hubSlide = Reveal.getSlide('hub'); // try to find the hub
-  console.log('hubSlide:', hubSlide);      // log the element to see if it exists
   if(event.currentSlide.querySelector('.return-to-hub')) {
+    const hubSlide = document.getElementById('hub'); // get the hub <section>
     if(hubSlide) {
-      console.log('Hub found, attempting to jump...');
-      console.log('Horizontal index:', hubSlide.dataset.indexh);
-      console.log('Vertical index:', hubSlide.dataset.indexv);
-      Reveal.slide(
-        parseInt(hubSlide.dataset.indexh || 0),
-        parseInt(hubSlide.dataset.indexv || 0)
-      );
+      const indices = Reveal.getIndices(hubSlide);
+      console.log('Jumping to hub indices:', indices);
+      setTimeout(() => {
+        Reveal.slide(indices.h, indices.v || 0);
+      }, 2000); // 2 seconds, delay optional
     } else {
       console.warn('Hub slide not found!');
     }
@@ -174,6 +227,29 @@ document.addEventListener('slidechanged', function(event) {
 });
 </script>
 
+<!-- Position all the links on the hub page in a circle -->
+<script>
+function positionHubCircle() {
+  const circle = document.querySelector('#hub .hub-circle');
+  const links = circle.querySelectorAll('a');
+  const radius = 200; // distance from center
+  const centerX = circle.offsetWidth / 2;
+  const centerY = circle.offsetHeight / 2;
+  const n = links.length;
+
+  links.forEach((link, i) => {
+    const angle = (i / n) * 2 * Math.PI; // evenly spaced
+    const x = centerX + radius * Math.cos(angle) - link.offsetWidth/2;
+    const y = centerY + radius * Math.sin(angle) - link.offsetHeight/2;
+    link.style.left = x + 'px';
+    link.style.top = y + 'px';
+  });
+}
+
+// Run after DOM loads
+window.addEventListener('DOMContentLoaded', positionHubCircle);
+window.addEventListener('resize', positionHubCircle);
+</script>
 
 <script type="module" src="slides/moon.js"></script>
 
