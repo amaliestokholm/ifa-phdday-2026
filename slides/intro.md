@@ -1,23 +1,32 @@
 <!-- .slide: data-auto-animate -->
 
-# How did you get there?
+## Hi IFA PhD students!
+### Amalie Stokholm
+## <span style="color: #888; font-family: monospace;">
+a.l.stokholm@bham.ac.uk
+</span>
 
-hello
+![Alt text](assets/my-picture.png)
+
+https://a.strova.dk/ifa-phdday-2026
+
 
 ---
 
 <!-- .slide: data-auto-animate -->
 
-# How did you get there? 2
+### I'm Amalie Stokholm
+<span style="color: #888; font-family: monospace;">
+[amaːljə, a-mah-lee-eh]
+</span>
+- I am a Research Fellow (postdoctoral 1 <!-- .element: class="fragment" data-fragment-index="1" -->
+- Item 2 <!-- .element: class="fragment" data-fragment-index="2" -->
 
-hello
-
-goodbye
 
 ---
 
 # Who am I?
-My name is Amalie Stokholm [amaːljə, a-mah-lee-eh]
+My name is Amalie Stokholm 
 I am a research fellow or in a post doctoral position at University of Birmingham in the United Kingdom.
 
 ---
