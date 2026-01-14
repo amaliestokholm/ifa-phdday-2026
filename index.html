@@ -83,17 +83,17 @@
 .timeline-dot[style*="left: 0%"] { background: color-mix(in srgb, #bd93f9 100%, #ff79c6 0%); }
 .timeline-dot[style*="left: 10%"] { background: color-mix(in srgb, #bd93f9 90%, #ff79c6 10%); }
 .timeline-dot[style*="left: 20%"] { background: color-mix(in srgb, #bd93f9 80%, #ff79c6 20%); }
-.timeline-dot[style*="left: 23%"] { background: color-mix(in srgb, #bd93f9 77%, #ff79c6 23%); }
+.timeline-dot[style*="left: 28%"] { background: color-mix(in srgb, #bd93f9 71%, #ff79c6 28%); }
 .timeline-dot[style*="left: 30%"] { background: color-mix(in srgb, #bd93f9 70%, #ff79c6 30%); }
 .timeline-dot[style*="left: 40%"] { background: color-mix(in srgb, #bd93f9 60%, #ff79c6 40%); }
-.timeline-dot[style*="left: 46%"] { background: color-mix(in srgb, #bd93f9 54%, #ff79c6 46%); }
+.timeline-dot[style*="left: 56%"] { background: color-mix(in srgb, #bd93f9 44%, #ff79c6 56%); }
 .timeline-dot[style*="left: 50%"] { background: color-mix(in srgb, #bd93f9 50%, #ff79c6 50%); }
 .timeline-dot[style*="left: 60%"] { background: color-mix(in srgb, #bd93f9 40%, #ff79c6 60%); }
-.timeline-dot[style*="left: 69%"] { background: color-mix(in srgb, #bd93f9 31%, #ff79c6 69%); }
+.timeline-dot[style*="left: 63%"] { background: color-mix(in srgb, #bd93f9 37%, #ff79c6 63%); }
 .timeline-dot[style*="left: 70%"] { background: color-mix(in srgb, #bd93f9 30%, #ff79c6 70%); }
 .timeline-dot[style*="left: 80%"] { background: color-mix(in srgb, #bd93f9 20%, #ff79c6 80%); }
 .timeline-dot[style*="left: 90%"] { background: color-mix(in srgb, #bd93f9 10%, #ff79c6 90%); }
-.timeline-dot[style*="left: 92%"] { background: color-mix(in srgb, #bd93f9 8%, #ff79c6 92%); }
+.timeline-dot[style*="left: 91%"] { background: color-mix(in srgb, #bd93f9 9%, #ff79c6 91%); }
 .timeline-dot[style*="left: 100%"] { background: color-mix(in srgb, #bd93f9 0%, #ff79c6 100%); }
 .timeline-year {
   position: absolute;
@@ -141,6 +141,7 @@
   opacity: 1;
   color: #333;
 }
+/* Map stuff */
 </style>
 
 </head>
@@ -191,6 +192,11 @@
 <script src="plugin/math/math.js"></script>
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/smallcontrol/smallcontrol.js"></script>
+
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
 
 <script>
@@ -250,6 +256,8 @@ function positionHubCircle() {
 window.addEventListener('DOMContentLoaded', positionHubCircle);
 window.addEventListener('resize', positionHubCircle);
 </script>
+
+<!-- Map zooming and stuff -->
 
 <script type="module" src="slides/moon.js"></script>
 
