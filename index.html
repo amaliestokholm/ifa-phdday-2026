@@ -103,22 +103,40 @@
   color: #6272a4;
   font-weight: 300;
 }
-/* Only style links inside the hub */
-#hub .hub-circle {
+#hub {
+  display: block !important;
   position: relative;
-  width: 400px;
-  height: 400px;
-  margin: 50px auto 0;
+  height: 100%;
+}
+#hub .hub-title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  font-size: 1em;
+  z-index: 10;
+}
+#hub .hub-circle {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 480px;
+  height: 480px;
+  transform: translate(-50%, -50%);
 }
 #hub .hub-circle a {
   position: absolute;
   display: block;
-  width: 100px;
-  height: 40px;
   text-align: center;
-  line-height: 40px;
+  font-size: 0.55em;
+  line-height: 1.1;
+  padding: 6px 10px;
+  width: 160px;
+  min-height: 56px;
+  border-radius: 28px;
   color: #333;
-  border-radius: 20px;
   text-decoration: none;
   transition: transform 0.3s, background 0.3s;
 }
@@ -129,7 +147,7 @@
 /* Style for ending-link */
 #hub .hub-thank-you {
   position: absolute;
-  bottom: 20;
+  bottom: 20px;
   right: 20px;
   font-size: 18;
   color: #EFEFEF;
@@ -158,16 +176,19 @@
 			 data-background-color="#EFEFEF">
 		</section>
 		<section id="hub" data-background-color="#EFEFEF">
-		      <h3>So what do you want to talk about?</h3>
+		      <h3 class="hub-title">So what do you want to talk about?</h3>
 		      <div class="hub-circle">
-			<a href="#topic-1">Topic 1</a><br>
-			<a href="#topic-2">Topic 2</a><br>
-			<a href="#topic-3">Topic 3</a><br>
-			<a href="#topic-4">Topic 4</a><br>
-			<a href="#topic-5">Topic 5</a><br>
-			<a href="#topic-6">Topic 6</a><br>
-			<a href="#topic-7">Topic 7</a>
-		      </div>
+			  <a href="#academic-ladder">What is the academic ladder?</a>
+			  <a href="#academic-job">What do you do day-to-day?</a>
+			  <a href="#job">How to get a job in academia?</a>
+			  <a href="#permanent-job">How to get a permanent job in academia?</a>
+			  <a href="#salary">Salary?</a>
+			  <a href="#living-abroad">Living abroad?</a>
+			  <a href="#women-in-stem">Women in Academia?</a>
+			  <a href="#my-postdocs">How is your <br>postdoc experience?</a>
+			  <a href="#my-phd">How was your<br>PhD experience?</a>
+			  <a href="#academia">What is academia about?</a>
+			</div>
 			<a href="#thank-you" class="hub-thank-you">Times up</a>
 		    </section>
 		<section data-markdown="./slides/choose-your-own.md"
@@ -186,7 +207,7 @@
 
 <!-- This below here are stuff like plugins or initialisation set-ups -->
 <script src="dist/reveal.js"></script>
-<script src="plugin/notes/notes.js"></script>
+<script src="plugin/notes/notes.js"</script>
 <script src="plugin/markdown/markdown.js"></script>
 <script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/math/math.js"></script>
@@ -238,17 +259,18 @@ document.addEventListener('slidechanged', function(event) {
 function positionHubCircle() {
   const circle = document.querySelector('#hub .hub-circle');
   const links = circle.querySelectorAll('a');
-  const radius = 200; // distance from center
   const centerX = circle.offsetWidth / 2;
   const centerY = circle.offsetHeight / 2;
+  const radiusX = centerX - 30;
+  const radiusY = centerY - 15;
   const n = links.length;
 
   links.forEach((link, i) => {
     const angle = (i / n) * 2 * Math.PI - Math.PI/2; // evenly spaced
-    const x = centerX + radius * Math.cos(angle) - link.offsetWidth/2;
-    const y = centerY + radius * Math.sin(angle) - link.offsetHeight/2;
-    link.style.left = x + 'px';
-    link.style.top = y + 'px';
+    const x = centerX + radiusX * Math.cos(angle);
+    const y = centerY + radiusY * Math.sin(angle);
+    link.style.left = (x - link.offsetWidth / 2) + 'px';
+    link.style.top = (y - link.offsetHeight / 2) + 'px';
   });
 }
 
@@ -256,8 +278,6 @@ function positionHubCircle() {
 window.addEventListener('DOMContentLoaded', positionHubCircle);
 window.addEventListener('resize', positionHubCircle);
 </script>
-
-<!-- Map zooming and stuff -->
 
 <script type="module" src="slides/moon.js"></script>
 
