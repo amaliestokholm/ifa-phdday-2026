@@ -244,7 +244,7 @@ function positionHubCircle() {
   const n = links.length;
 
   links.forEach((link, i) => {
-    const angle = (i / n) * 2 * Math.PI; // evenly spaced
+    const angle = (i / n) * 2 * Math.PI - Math.PI/2; // evenly spaced
     const x = centerX + radius * Math.cos(angle) - link.offsetWidth/2;
     const y = centerY + radius * Math.sin(angle) - link.offsetHeight/2;
     link.style.left = x + 'px';

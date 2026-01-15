@@ -42,7 +42,25 @@ https://a.strova.dk/ifa-phdday-2026
       </li>
     </ul>
   </li>
+  <li class="fragment" data-fragment-index="4">
+    In addition to research, I also work on the ESA space mission <b>PLATO</b> which is getting ready for launch in January 2027
+  </li>
 </ul>
+
+---
+
+### What is my science about?
+
+Dating event
+
+Stars are shining elements of the islands of matter we call galaxies.
+They a
+
+I am studying that through a combination of detailed studies of 
+eigen modes of
+Stars are resonant cavities vibrate at specific eigenfrequencies and by studying these oscillations we veal stellar internal structure, rotation, and composition through subtle brightness changes as these modes are excited and detected, providing a "seismic" probe into otherwise hidden interiors. 
+This is similar to how seismology maps Earth's core.
+
 
 ---
 
