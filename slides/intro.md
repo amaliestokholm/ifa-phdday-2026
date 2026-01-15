@@ -36,10 +36,10 @@ https://a.strova.dk/ifa-phdday-2026
   <li class="fragment" data-fragment-index="2">
     I work within the field of <b>astrophysics</b>
     <ul>
-      <li class="fragment" data-fragment-index="3">
-        more specifically with <b>stellar inference</b>, <b>asteroseismology</b>,
-        <b>astrostatistics</b>, and <b>Galactic Archaeology</b>
-      </li>
+  <li class="fragment" data-fragment-index="3">
+    more specifically with <b>stellar inference</b>, <b>asteroseismology</b>,
+    <b>astrostatistics</b>, and <b>Galactic Archaeology</b>
+  </li>
     </ul>
   </li>
   <li class="fragment" data-fragment-index="4">
@@ -51,16 +51,31 @@ https://a.strova.dk/ifa-phdday-2026
 
 ### What is my science about?
 
-Dating event
+✨ Stars as cosmic clocks ✨
 
-Stars are shining elements of the islands of matter we call galaxies.
-They a
+<div class="fragment" data-fragment-index="1">
+<b>The Universe evolves on times scales far longer than human life times</b>, making it difficult to study when what happened and at what rate.
+</div>
+<br>
+<div class="fragment" data-fragment-index="2">
+I treat <b>stars as fossil records</b>, which <b> allows</b> me to construct a more <b> precise timeline</b> of cosmic events.
+</div>
+<br>
+<div class="fragment" data-fragment-index="3">
+Stars are resonant cavities vibrate at specific eigenfrequencies.
+This provides us with a <b>seismic</b> probe into otherwise hidden interiors, yielding remarkable <b>precise age records</b>.
+</div>
 
-I am studying that through a combination of detailed studies of 
-eigen modes of
-Stars are resonant cavities vibrate at specific eigenfrequencies and by studying these oscillations we veal stellar internal structure, rotation, and composition through subtle brightness changes as these modes are excited and detected, providing a "seismic" probe into otherwise hidden interiors. 
-This is similar to how seismology maps Earth's core.
+Note:
+Stars are the grains of sand on these small islands of matter we call galaxies in the vast void of space.
 
+The Universe evolves on times scales far longer than human life times, making it difficult to obtain the temporal resolution needed to disentangle the events and processes that shape it. 
+
+Stars have been around cosmically for a long time
+We treat stars as fossil records and study how they have been shaped and influenced over billions of years, and thus construct a more precise timeline of cosmic events.
+
+Stars are resonant cavities vibrate at specific eigenfrequencies, producing subtle brightness variations as the modes are excited and observed.
+This provides us with a <b>seismic</b> probe into otherwise hidden interiors, yielding remarkable precise age records.
 
 ---
 
