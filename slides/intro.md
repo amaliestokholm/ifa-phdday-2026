@@ -87,12 +87,14 @@ This provides us with a <b>seismic</b> probe into otherwise hidden interiors, yi
 <li class="fragment" data-fragment-index="2" style="margin-bottom: 15px; font-size: 0.9em;">
 <strong style="color: #ff79c6;">2017:</strong> Started PhD (4+4) </li>
 <li class="fragment" data-fragment-index="3" style="margin-bottom: 15px; font-size: 0.9em;">
-<strong style="color: #ff79c6;">2021:</strong> Started Postdoc at Università di Bologna, Italy </li>
+<strong style="color: #ff79c6;">2020:</strong> Research stay at MPIA, Germany</li>
 <li class="fragment" data-fragment-index="4" style="margin-bottom: 15px; font-size: 0.9em;">
-<strong style="color: #ff79c6;">2022:</strong> Defended PhD</li>
+<strong style="color: #ff79c6;">2021:</strong> Started Postdoc at Università di Bologna, Italy </li>
 <li class="fragment" data-fragment-index="5" style="margin-bottom: 15px; font-size: 0.9em;">
-<strong style="color: #ff79c6;">2023:</strong> Started Postdoc at University of Birmingham, UK </li>
+<strong style="color: #ff79c6;">2022:</strong> Defended PhD</li>
 <li class="fragment" data-fragment-index="6" style="margin-bottom: 15px; font-size: 0.9em;">
+<strong style="color: #ff79c6;">2023:</strong> Started Postdoc at University of Birmingham, UK </li>
+<li class="fragment" data-fragment-index="7" style="margin-bottom: 15px; font-size: 0.9em;">
 <strong style="color: #ff79c6;">2026:</strong> Current position at Birmingham </li>
 </ul>
 
@@ -104,17 +106,19 @@ This provides us with a <b>seismic</b> probe into otherwise hidden interiors, yi
 <!-- Timeline dots (one per event) -->
 <div class="timeline-dot fragment" data-fragment-index="1" style="left: 0%;"></div>
 <div class="timeline-dot fragment" data-fragment-index="2" style="left: 28%;"></div>
-<div class="timeline-dot fragment" data-fragment-index="3" style="left: 56%;"></div>
-<div class="timeline-dot fragment" data-fragment-index="4" style="left: 63%;"></div>
-<div class="timeline-dot fragment" data-fragment-index="5" style="left: 70%;"></div>
-<div class="timeline-dot fragment" data-fragment-index="6" style="left: 91%;"></div>
+<div class="timeline-dot fragment" data-fragment-index="3" style="left: 49%;"></div>
+<div class="timeline-dot fragment" data-fragment-index="4" style="left: 56%;"></div>
+<div class="timeline-dot fragment" data-fragment-index="5" style="left: 63%;"></div>
+<div class="timeline-dot fragment" data-fragment-index="6" style="left: 70%;"></div>
+<div class="timeline-dot fragment" data-fragment-index="7" style="left: 91%;"></div>
 <!-- Year labels -->
 <div class="timeline-year fragment" data-fragment-index="1" style="left: 0%;">2013</div>
 <div class="timeline-year fragment" data-fragment-index="2" style="left: 28%;">'17</div>
-<div class="timeline-year fragment" data-fragment-index="3" style="left: 56%;">'21</div>
-<div class="timeline-year fragment" data-fragment-index="4" style="left: 63%;">'22</div>
-<div class="timeline-year fragment" data-fragment-index="5" style="left: 70%;">'23</div>
-<div class="timeline-year fragment" data-fragment-index="6" style="left: 91%;">2026</div>
+<div class="timeline-year fragment" data-fragment-index="3" style="left: 49%;">'20</div>
+<div class="timeline-year fragment" data-fragment-index="4" style="left: 56%;">'21</div>
+<div class="timeline-year fragment" data-fragment-index="5" style="left: 63%;">'22</div>
+<div class="timeline-year fragment" data-fragment-index="6" style="left: 70%;">'23</div>
+<div class="timeline-year fragment" data-fragment-index="7" style="left: 91%;">2026</div>
 
 </div>
 
